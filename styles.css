@@ -63,14 +63,46 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .task{
-    width: 800px;
-    font-size: 20px;
-    font-weight: bold;
+    width: 750px;
+    font-size: 22px;
     background-color: #fffffe;
     border-radius: 20px;
     box-shadow: 5px 5px 20px black;
-    padding: 20px 0 20px 50px;
+    padding: 15px 30px 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-buttons{
+  align-content: flex-end;
+  display: flex;
+  gap: 30px;
+}
+
+.edit-button , .complete-button, .delete-button{
+  /* margin-right: 20px; */
+  border: none;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.edit-button:hover{
+  background-color: lightblue;
+  box-shadow: 0px 0px 10px lightblue;
+}
+
+.complete-button:hover{
+  background-color: lightgreen;
+  box-shadow: 0px 0px 10px lightgreen;
+}
+
+.delete-button:hover{
+  background-color: lightpink;
+  box-shadow: 0px 0px 10px lightpink;
 }
