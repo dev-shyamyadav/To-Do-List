@@ -78,6 +78,15 @@ body {
     align-items: center;
 }
 
+.complete{
+  opacity: .5;
+}
+
+.text-content{
+  text-decoration: line-through;
+  color: darkgray;
+}
+
 .task-buttons{
   align-content: flex-end;
   display: flex;

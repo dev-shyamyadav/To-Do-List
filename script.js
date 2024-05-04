@@ -29,6 +29,10 @@ let addTask = addButton.addEventListener("click", (event) => {
         completeButton.className = "complete-button";
         completeButton.innerHTML = "<i class='fa-solid fa-check'></i>";
         taskButtons.appendChild(completeButton);
+        completeButton.addEventListener("click", () => {
+            textContent.classList.toggle("text-content");
+            newTask.classList.toggle("complete");
+        });
 
         //Create edit button
         let editButton = document.createElement("button");
