@@ -31,7 +31,7 @@ let addTask = addButton.addEventListener("click", (event) => {
         taskButtons.appendChild(completeButton);
         completeButton.addEventListener("click", () => {
             textContent.classList.toggle("text-content");
-            newTask.classList.toggle("complete");
+            newTask.classList.toggle("complete");clear
         });
 
         //Create edit button
@@ -45,7 +45,9 @@ let addTask = addButton.addEventListener("click", (event) => {
         deleteButton.className = "delete-button";
         deleteButton.innerHTML = "<i class='fa-solid fa-trash'></i>";
         taskButtons.appendChild(deleteButton);
-
+        deleteButton.addEventListener("click", () => {
+            newTask.remove();
+        });
 
     }
 })
