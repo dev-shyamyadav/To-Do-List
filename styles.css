@@ -87,6 +87,13 @@ body {
   color: darkgray;
 }
 
+.edit-field{
+  width: 300px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+}
+
 .task-buttons{
   align-content: flex-end;
   display: flex;

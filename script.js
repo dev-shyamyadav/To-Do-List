@@ -39,6 +39,30 @@ let addTask = addButton.addEventListener("click", (event) => {
         editButton.className = "edit-button";
         editButton.innerHTML = "<i class='fa-solid fa-pen'></i>";
         taskButtons.appendChild(editButton);
+        editButton.addEventListener("click", () => {
+            if (newTask.querySelector("input[type='text']")) return; // Check if already in edit mode
+            let originalText = textContent.innerHTML; // Store the original task text
+            textContent.remove();
+            let editField = document.createElement("input");
+            editField.type = "text";
+            editField.className = "edit-field";
+            editField.placeholder = "New Task...";
+            newTask.insertBefore(editField, newTask.firstChild);
+            editField.focus();
+            editField.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (editField.value.trim() === "") {
+                        alert("Enter New Task");
+                    } else {
+                        textContent.innerHTML = editField.value.trim(); // Update task text
+                        editField.remove();
+                        newTask.insertBefore(textContent, newTask.firstChild);
+                    }
+                }
+            });
+        });
+        
 
         //Create delete button
         let deleteButton = document.createElement("button");
