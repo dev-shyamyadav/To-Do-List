@@ -1,9 +1,24 @@
 let taskList = document.querySelector(".task-list");
 let inputField = document.querySelector(".input-field");
 let addButton = document.querySelector(".add-button");
+let taskNum = 0;
+
+let addEmpty = () => {
+    if(taskNum === 0){
+        let emptyDiv = document.createElement("div");
+        emptyDiv.className = "empty";
+        emptyDiv.innerHTML = "<i class='fa-solid fa-inbox'></i>You have nothing task today!";
+        taskList.appendChild(emptyDiv);
+    }
+    else{
+        document.querySelector(".empty").remove();
+    }
+}
+addEmpty();
 
 let addTask = addButton.addEventListener("click", (event) => {
     event.preventDefault();
+    taskNum++;
     let taskText = inputField.value.trim();
     if (taskText === "") {
         alert( "Please enter a task" );
@@ -71,7 +86,10 @@ let addTask = addButton.addEventListener("click", (event) => {
         taskButtons.appendChild(deleteButton);
         deleteButton.addEventListener("click", () => {
             newTask.remove();
+            taskNum--;
+            addEmpty();
         });
 
     }
+    addEmpty();
 })

@@ -66,41 +66,56 @@ body {
   margin-bottom: 2rem;
 }
 
-.task{
-    width: 750px;
-    font-size: 22px;
-    background-color: #fffffe;
-    border-radius: 20px;
-    box-shadow: 5px 5px 20px black;
-    padding: 15px 30px 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.empty {
+  width: 750px;
+  font-size: 22px;
+  background-color: #fffffe;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px black;
+  padding: 15px 30px 15px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.complete{
-  opacity: .5;
+.task {
+  width: 750px;
+  font-size: 22px;
+  background-color: #fffffe;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px black;
+  padding: 15px 30px 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.text-content{
+.complete {
+  opacity: 0.5;
+}
+
+.text-content {
   text-decoration: line-through;
   color: darkgray;
 }
 
-.edit-field{
+.edit-field {
   width: 300px;
   font-size: 22px;
   border: none;
   outline: none;
 }
 
-.task-buttons{
+.task-buttons {
   align-content: flex-end;
   display: flex;
   gap: 30px;
 }
 
-.edit-button , .complete-button, .delete-button{
+.edit-button,
+.complete-button,
+.delete-button {
   border: none;
   border-radius: 50px;
   width: 40px;
@@ -108,17 +123,17 @@ body {
   cursor: pointer;
 }
 
-.edit-button:hover{
+.edit-button:hover {
   background-color: lightblue;
   box-shadow: 0px 0px 10px lightblue;
 }
 
-.complete-button:hover{
+.complete-button:hover {
   background-color: lightgreen;
   box-shadow: 0px 0px 10px lightgreen;
 }
 
-.delete-button:hover{
+.delete-button:hover {
   background-color: lightpink;
   box-shadow: 0px 0px 10px lightpink;
 }
